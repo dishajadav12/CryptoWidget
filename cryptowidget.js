@@ -1,3 +1,4 @@
+console.log("Cryptowidget script is loaded.");
 const widgetContainer = document.getElementById("coin-widget");
 
 // Get the token name and currency type from the data attributes
