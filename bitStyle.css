@@ -65,3 +65,14 @@ body{
     text-transform: uppercase;
     padding-left: 2px;
 }
+.scriptlink-container{
+    width: 600px;
+    border: solid 2px rgba(192, 192, 192,0.5);
+    border-radius: 12px;
+    margin: 3% 5%;
+    padding: 1% 2% ;
+}
+.scriptlink-container pre {
+    font-family: monospace; /* Use a monospaced font to maintain spacing */
+    white-space: pre-wrap; /* Allow line breaks */
+  }
