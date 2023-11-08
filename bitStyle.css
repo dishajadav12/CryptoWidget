@@ -1,12 +1,12 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 5% auto auto 20%;
+  margin: 3% auto auto 20%;
 }
 .coingecko-token-widget {
   width: 600px;
   border: solid 2px rgba(192, 192, 192, 0.5);
   border-radius: 12px;
-  margin: 5%;
+  margin: 2% 5%;
 }
 .section-1 {
   display: flex;
@@ -63,10 +63,24 @@ body {
   width: 600px;
   border: solid 2px rgba(192, 192, 192, 0.5);
   border-radius: 12px;
+  font-size: 14px;
   margin: 3% 5%;
   padding: 1% 2%;
 }
 .scriptlink-container pre {
   font-family: monospace; /* Use a monospaced font to maintain spacing */
   white-space: pre-wrap; /* Allow line breaks */
+}
+.custom-select {
+  border: none !important;
+  margin: 1% 5% 3% 5%;
+  padding: 1% 8% 1% 2%;
+  border-radius: 12px;
+  background-color: rgba(223, 223, 223, 0.5);
+}
+#coin-type option {
+  background-color: rgba(223, 223, 223, 0.5);
+  border: none;
+  font-size: 13px;
+  line-height: 30px;
 }
