@@ -7,7 +7,6 @@ document.getElementById('coin-widget').addEventListener('change', (event) => {
   // Update the 'token-name' attribute for both elements
   coinWidget.setAttribute('token-name', selectedCoin);
 
-  // Reload the widget with the updated attribute
   loadCryptoWidget(selectedCoin);
 });
 
@@ -16,11 +15,11 @@ function loadCryptoWidget(selectedCoin) {
   console.log("Cryptowidget script is loaded.");
   const widgetContainer = document.getElementById("coin-widget");
 
-  // Get the token name and currency type from the data attributes
+  // token name and currency type from the data attributes
   const tokenName = widgetContainer.getAttribute("token-name");
   const currencyType = widgetContainer.getAttribute("data-stats");
 
-  // Get additional attributes for conditional display
+  // attributes for conditional display
   const showRank = widgetContainer.getAttribute("data-rank") === "true";
   const showMarketCap = widgetContainer.getAttribute("data-marketcap") === "true";
   const showVolume = widgetContainer.getAttribute("data-volume") === "true";
@@ -32,7 +31,7 @@ function loadCryptoWidget(selectedCoin) {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
-      // Extract the relevant information from the response
+      // required information from the response
       const name = data.name;
       const market_cap_rank = data.market_cap_rank;
       const market_cap = data.market_data.market_cap[currencyType.toLowerCase()];
@@ -43,7 +42,7 @@ function loadCryptoWidget(selectedCoin) {
       const market_cap_fdv_ratio = data.market_data.market_cap_fdv_ratio;
       const icon = data.image.small;
 
-      // Create the HTML structure dynamically
+      //  HTML structure 
       const widgetHTML = `
       <div class="dropdown">
       <div for="coin-type" class="text-muted">Cryptocurrency:</div>
@@ -103,11 +102,10 @@ function loadCryptoWidget(selectedCoin) {
         </div>
       `;
 
-      // Set the widget container's innerHTML to the generated content
+      //  widget container's innerHTML to the generated content
       widgetContainer.innerHTML = widgetHTML;
     })
     .catch((error) => {
-      // Handle any errors
       console.error("Error fetching data:", error);
     });
 }
