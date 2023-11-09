@@ -11,29 +11,16 @@
 
   </head>
   <body>
-    <div class="dropdown">
-      <div for="coin-type" class="text-muted">Cryptocurrency:</div>
-      <select id="coin-type" class="custom-select">
-        <option value="bitcoin">
-          <img
-            src="https://assets.coingecko.com/coins/images/1/thumb/bitcoin.png?1696501400"
-            alt=""
-          />
-          Bitcoin
-        </option>
-        <option value="ethereum">Ethereum</option>
-        <option value="usd-coin">USD Coin</option>
-        <option value="tether">Tether</option>
-      </select>
-    </div>
-    <p style="color: rgb(150, 148, 148)">Widget Preview</p>
+
 
     <!-- Include your JavaScript file -->
     <script type="text/javascript" src="cryptowidget.js" async defer></script>
+    <p style="color: rgb(150, 148, 148)">Widget Preview</p>
 
     <!-- Custom widget element with attributes for conditional display -->
     <div
       id="coin-widget"
+      token-name="tether"
       data-stats="usd"
       data-rank="true"
       data-marketcap="true"

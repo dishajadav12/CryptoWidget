@@ -1,7 +1,7 @@
 const coinWidget = document.getElementById('coin-widget');
 
 // Add an event listener to the dropdown for changes
-document.getElementById('coin-type').addEventListener('change', (event) => {
+document.getElementById('coin-widget').addEventListener('change', (event) => {
   const selectedCoin = event.target.value;
   
   // Update the 'token-name' attribute for both elements
@@ -26,7 +26,7 @@ function loadCryptoWidget(selectedCoin) {
   const showVolume = widgetContainer.getAttribute("data-volume") === "true";
 
   // CoinGecko API URL for the specified token
-  const apiUrl = `https://api.coingecko.com/api/v3/coins/${selectedCoin}`;
+  const apiUrl = `https://api.coingecko.com/api/v3/coins/${selectedCoin,tokenName }`;
 
   // Fetch data from CoinGecko API
   fetch(apiUrl)
@@ -45,7 +45,16 @@ function loadCryptoWidget(selectedCoin) {
 
       // Create the HTML structure dynamically
       const widgetHTML = `
-      
+      <div class="dropdown">
+      <div for="coin-type" class="text-muted">Cryptocurrency:</div>
+      <select id="coin-type" class="custom-select">
+      <option value="">Coin Type</option>
+        <option value="bitcoin">Bitcoin</option>
+        <option value="ethereum">Ethereum</option>
+        <option value="usd-coin">USD Coin</option>
+        <option value="tether">Tether</option>
+      </select>
+    </div>
         <div class="coingecko-token-widget">
           <div class="section-1">
             <div class="sub-sec-11">
